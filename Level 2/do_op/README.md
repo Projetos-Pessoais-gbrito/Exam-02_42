@@ -8,7 +8,7 @@ Allowed functions: atoi, printf, write
 
 Write a program that takes three strings:
 - The first and the third one are representations of base-10 signed integers
-  that fit in an int.
+that fit in an int.
 - The second one is an arithmetic operator chosen from: + - * / %
 
 The program must display the result of the requested arithmetic operation,
