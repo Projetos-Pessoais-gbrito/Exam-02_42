@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrev_gs.c                                     :+:      :+:    :+:   */
+/*   ft_strdup_gs.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/16 16:56:19 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2025/01/16 21:53:30 by gustavo-lin      ###   ########.fr       */
+/*   Created: 2025/01/16 15:09:54 by gustavo-lin       #+#    #+#             */
+/*   Updated: 2025/01/16 15:13:58 by gustavo-lin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strrev(char *str)
+#include <stdlib.h>
+#include <stdio.h>
+
+char    *ft_strdup(char *src)
 {
-	char tmp;
+	char *strdup;
 	int i;
-	int j;
 
 	i = 0;
-	j = 0;
-	if (*str == '\0')
-		return (str);
-	while (str[i])
+	strdup = '\0';
+	while (src[i])
 		i++;
-	while (j <= (i / 2))
+	strdup = malloc(sizeof (char) * (i + 1));
+	i = 0;
+	while (src[i])
 	{
-		tmp = str[i - 1];
-		str[i - 1] = str[j];
-		str[j] = tmp;
-		j++;
-		i--;
+		strdup[i] = src[i];
+		i++;
 	}
-	return (str);
+	strdup[i] = '\0';
+	return (strdup);
 }

@@ -6,7 +6,7 @@
 /*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 02:30:01 by codespace         #+#    #+#             */
-/*   Updated: 2025/01/16 14:31:56 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2025/01/16 15:14:01 by gustavo-lin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strcspn(const char *s, const char *reject)
 {
 	int i;
 	int j;
-	int initial_seg_bytes;
+	size_t initial_seg_bytes;
 
 	i = 0;
 	j = 0;
@@ -52,8 +52,8 @@ size_t	ft_strcspn(const char *s, const char *reject)
 
 int main ()
 {
-	//printf("%ld\n", ft_strcspn("helloworld", "world"));
-	printf("%ld\n", strcspn("helloworld", "world"));
-	//printf("%ld\n", ft_strcspn("gustavo", "avo"));
-	//printf("%ld\n", strcspn("gustavo", "avo"));
+	printf("%ld\n", ft_strcspn("hello wod", "world"));
+	printf("%ld\n", strcspn("hello wod", "world"));
+	printf("%ld\n", ft_strcspn("guvtavo", "avo"));
+	printf("%ld\n", strcspn("guvtavo", "avo"));
 }

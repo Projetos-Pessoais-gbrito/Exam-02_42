@@ -1,34 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrev_gs.c                                     :+:      :+:    :+:   */
+/*   ft_strpbrk_gs.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/16 16:56:19 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2025/01/16 21:53:30 by gustavo-lin      ###   ########.fr       */
+/*   Created: 2025/01/16 15:14:27 by gustavo-lin       #+#    #+#             */
+/*   Updated: 2025/01/16 16:48:51 by gustavo-lin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strrev(char *str)
-{
-	char tmp;
-	int i;
-	int j;
+#include <string.h>
 
+char	*ft_strpbrk(const char *s1, const char *s2)
+{	
+	int		i;
+	int		j;
+	char	*returning_string;
+	
 	i = 0;
 	j = 0;
-	if (*str == '\0')
-		return (str);
-	while (str[i])
-		i++;
-	while (j <= (i / 2))
+	while (s1[i])
 	{
-		tmp = str[i - 1];
-		str[i - 1] = str[j];
-		str[j] = tmp;
-		j++;
-		i--;
+		j = 0;
+		while (s2[j])
+		{
+			if (s1[i] == s2[j])
+				return ((char *)&s1[i]);
+			j++;
+		}
+		i++;
 	}
-	return (str);
+	return (NULL);
 }
