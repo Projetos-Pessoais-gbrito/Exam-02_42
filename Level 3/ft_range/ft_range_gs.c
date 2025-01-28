@@ -6,7 +6,7 @@
 /*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 22:38:34 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2025/01/27 23:00:35 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2025/01/27 23:27:50 by gustavo-lin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,20 +29,36 @@ int	*ft_range(int start, int end)
 		elements_in_array++;
 		start++;
 	}
+	while(start > end)
+	{
+		elements_in_array++;
+		start--;
+	}
 	int_array = malloc(sizeof (int) * elements_in_array);
 	if (int_array == ((void *)0))
 		return NULL;
 	while (index < elements_in_array)
 	{
+		while (tmp > end)
+		{
+			int_array[index] = tmp;
+			tmp--;
+			index++;
+			printf("%d", int_array[index]);
+		}
+		while (tmp < end)
+		{
+			int_array[index] = tmp;
+			tmp++;
+			index++;
+		}
 		int_array[index] = tmp;
-		tmp++;
-		index++;
 	}
 	return int_array;
 }
 
 int main(void)
 {
-	ft_range(1, 3);
+	ft_range(0, -3);
 	return (0);
 }
