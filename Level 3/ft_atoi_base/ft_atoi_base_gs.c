@@ -6,7 +6,7 @@
 /*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 21:09:18 by gserafio          #+#    #+#             */
-/*   Updated: 2025/01/24 14:49:06 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2025/02/02 22:37:38 by gustavo-lin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,13 +61,15 @@ int	ft_atoi_base(const char *str, int str_base)
 			else
 				return -1;
 		}
+		if ((str[i] > 'f' && str[i] <= 'z') || (str[i] > 'F' && str[i] <= 'Z'))
+			return -1;
 	}
 	return (result * sign);
 }
 
 int main(void)
 {
-	printf("%d", ft_atoi_base("123gfad",16));
+	ft_atoi_base("00002BF1",16);
 	return (0);
 }
 

@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_bits_gs.c                                    :+:      :+:    :+:   */
+/*   fprime_gs.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/19 23:31:30 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2025/02/04 22:54:06 by gustavo-lin      ###   ########.fr       */
+/*   Created: 2025/02/03 23:22:34 by gustavo-lin       #+#    #+#             */
+/*   Updated: 2025/02/04 05:42:39 by gustavo-lin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include <stdio.h>
+#include <stdlib.h>
 
-void	print_bits(unsigned char octet)
+int fprime_gs()
 {
-	char octet_bits;
-	int i;
-	i = (sizeof(unsigned char) * 8) - 1;
-	while(i >= 0)
+	
+}                                
+
+int main(int argc, char **argv)
+{
+	if (argc != 2)
 	{
-		octet_bits = ((octet >> i) & 1) + '0';
-		write(1, &octet_bits, 1);
-		i--;
+		write(1, "\n", 1);
+		return(0);		
 	}
+	fprime_gs();
+	return (0);
 }

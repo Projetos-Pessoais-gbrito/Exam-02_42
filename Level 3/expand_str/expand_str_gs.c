@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   expand_str_gs.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gserafio <gserafio@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 22:22:14 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2025/01/23 20:47:30 by gserafio         ###   ########.fr       */
+/*   Updated: 2025/02/04 23:40:52 by gustavo-lin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,12 @@ void expand_str(char **argv)
 			i++;
 		if (argv[1][i] == ' ' && argv[1][i + 1] != ' ')
 			i++;
-		write(1, &argv[1][i], 1);
+        if (argv[1][i] ==  '.')
+        {
+            write(1, &argv[1][i], 1);
+            break;
+        }
+        write(1, &argv[1][i], 1);
 		i++;
 	}
 }
