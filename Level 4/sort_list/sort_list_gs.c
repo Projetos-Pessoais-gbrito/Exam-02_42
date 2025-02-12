@@ -6,7 +6,7 @@
 /*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 17:20:47 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2025/02/11 21:33:50 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2025/02/11 22:24:08 by gustavo-lin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,12 +62,18 @@ int main() {
     t_list n3 = {8, NULL};
     t_list n4 = {2, NULL};
     t_list n5 = {6, NULL};
+    t_list n6 = {3, NULL};
+    t_list n7 = {9, NULL};
+    t_list n8 = {0, NULL};
 
     // Ligando os nós manualmente
     n1.next = &n2;
     n2.next = &n3;
     n3.next = &n4;
     n4.next = &n5;
+    n5.next = &n6;
+    n6.next = &n7;
+    n7.next = &n8;
 
     t_list *head = &n1;  // O primeiro nó da lista
 
