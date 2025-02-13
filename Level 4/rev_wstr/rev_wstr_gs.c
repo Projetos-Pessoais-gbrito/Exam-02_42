@@ -6,7 +6,7 @@
 /*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 18:35:37 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2025/02/12 23:14:41 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2025/02/12 23:16:51 by gustavo-lin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,25 +16,19 @@
 void rev_wstr(char **argv)
 {
     int str_len;
-    int i;
     int word_final_index;
     int tmp_word_first_index;
     int word_first_index;
 
     str_len = 0;
     word_final_index = 0;
-    i = 0;
     tmp_word_first_index = 0;
     word_first_index = 0;
     while (argv[1][str_len])
         str_len++;
-    while (argv[1][i] == ' ')
-        i++;
-    while (argv[1][str_len - 1] == ' ')
-        str_len--;
     word_first_index = str_len - 1;
     word_final_index = str_len - 1;
-    while (word_first_index > i)
+    while (word_first_index > 0)
     {
         while (argv[1][word_first_index] != ' ' && word_first_index >= 0)
         {
