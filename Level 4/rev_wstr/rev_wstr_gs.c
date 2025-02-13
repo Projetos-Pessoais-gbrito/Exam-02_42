@@ -6,7 +6,7 @@
 /*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 18:35:37 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2025/02/12 23:06:02 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2025/02/12 23:14:41 by gustavo-lin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void rev_wstr(char **argv)
             
 			tmp_word_first_index++;
         }
-        if (argv[1][word_final_index + 1] == '\0' && argv[1][word_first_index + 1] != argv[1][0])
+        if (argv[1][word_final_index + 1] == '\0' && word_first_index >= 0)
             write(1, " ", 1);
         word_first_index--;
     }
